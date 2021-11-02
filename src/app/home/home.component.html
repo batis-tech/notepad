@@ -1,13 +1,20 @@
 <div class="container is-max-desktop">
   <div class="notification is-primary">
     <div class="columns is-mobile is-centered mb-6" >
-      <input matInput class="input is-link " type="text" placeholder="Search">
+      <input  class="input is-link " type="text" placeholder="Search" [(ngModel)]="search">
     </div>
-    <div class=" columns is-mobile is-centered">
-      <div class="box is-two-fifths">
-        I'm in a box.
-      </div>
+    <div *ngFor="let note of notes | filter : search">
+      <div class=" columns is-mobile is-centered">
+        <div class="box is-two-fifths">
+          <div class="x-button" (click)="onDelete(id)"></div>
+
+          {{note.title}}
+          <hr>
+          {{note.desc}}
+        </div>
+      </div><br>
     </div>
+
   </div>
   <div class="columns is-mobile is-centered">
     <a mat-raised-button routerLink="/add-note" class="btn is-size-5">Add a note</a>

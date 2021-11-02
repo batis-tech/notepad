@@ -1,6 +1,44 @@
 .container {
   .box {
     width: 40%;
+    transition: box-shadow 0.2 ease-out;
+    box-shadow: 0px 2px 15px 2px rgba(black, 0.068);
+    position: relative;
+
+    &:hover{
+      box-shadow: 0px 0px  0px 4px rgba(black, 0.068);
+      cursor: pointer;
+      .x-button{
+        opacity: 1;
+
+      }
+
+    }
+    .x{
+    position: relative;
+    float: right;
+    top: -16px;
+    background: none;
+    border: none;
+
+    &:hover{
+
+    }
+    }
+    .x-button{
+      position:absolute;
+      top:12px;
+      right:12px;
+      height: 34px;
+      width:34px;
+      border-radius: 4px;
+      background-image: url('../../assets/x.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+        transition: opacity 0.2 ease-out;
+      opacity: 0;
+
+    }
   }
 
   .is-link.input {
@@ -20,4 +58,10 @@
   background-color: #01d1b2;
   color: white
   }
+  hr{
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+
 }
