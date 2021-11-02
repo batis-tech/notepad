@@ -1,0 +1,34 @@
+.container {
+  .box {
+    width: 50%;
+
+    .input,
+    .textarea {
+      background-color: #EFF0EB;
+    }
+  }
+
+  .is-link.input {
+    border-color: #ffffff;
+    width: 100%;
+  }
+
+  .input {
+    display: block;
+    width: 100%!important;
+  }
+
+  .btn {
+    background-color: #01d1b2;
+    color: white;
+  }
+  .btnSecondary {
+    background-color: white;
+    color: grey;
+    border: none;
+  }
+
+  .label {
+    color: #01d1b2;
+  }
+}
