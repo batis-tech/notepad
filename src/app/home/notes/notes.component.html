@@ -1,0 +1,11 @@
+<div [routerLink]="[index]"  (click)="onUpdate(index)">
+  <div  #bodyText class=" columns is-mobile is-centered">
+    <div class="box is-two-fifths">
+      <div class="x-button" (click)="onDelete()"></div>
+      {{note.title}}
+      <hr>
+      {{note.desc}}
+      <div #truncat class="fade-out-truncation"></div>
+    </div>
+  </div><br>
+</div>

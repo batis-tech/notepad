@@ -13,12 +13,14 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NotesComponent } from './home/notes/notes.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
     FormComponent,
+    NotesComponent,
   ],
   imports: [
     BrowserModule,

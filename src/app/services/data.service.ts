@@ -7,22 +7,33 @@ import { Subject } from "rxjs";
 export class DataService {
   notePadsChanged = new Subject<NotePadData[]>();
   private notePads: NotePadData[] = [
-    new NotePadData('Angular', "A project needed to be done today"),
+    new NotePadData('Angular', "A project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done todayA project needed to be done today"),
     new NotePadData('Rails', "A web application needed to be done as well"),
   ];
 
 
 
   constructor() { }
-
-  getNotes(){
-    return this.notePads.slice()
+  getAllNotes(){
+    return this.notePads
+  }
+  getNotes(id:number){
+    return this.notePads[id]
+  }
+  getId(notePads: NotePadData){
+    return this.notePads.indexOf(notePads)
   }
   addNote(note:NotePadData){
-   this.notePads.push(note);
+   let newLength = this.notePads.push(note);
+   let index = newLength - 1;
+   return index
   }
-  deleteNote(id:any){
-    this.notePads.splice(id, 1);
-    this.notePadsChanged.next(this.notePads.slice());
+
+  deleteNote(index:number){
+  this.notePads.splice(index, 1);
   }
+  update(index: number, notePads: NotePadData){
+  this.notePads[index] = notePads;
+  this.notePadsChanged.next(this.notePads.slice());
+}
 }

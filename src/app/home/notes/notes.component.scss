@@ -1,4 +1,4 @@
-.container {
+
   .box {
     width: 40%;
     transition: box-shadow 0.2 ease-out;
@@ -34,7 +34,7 @@
       height: 34px;
       width:34px;
       border-radius: 4px;
-      background-image: url('../../assets/x.svg');
+      background-image: url('../../../assets/x.svg');
       background-repeat: no-repeat;
       background-position: center;
         transition: opacity 0.2 ease-out;
@@ -71,6 +71,3 @@
     margin-top: 5px;
     margin-bottom: 10px;
   }
-
-
-}
